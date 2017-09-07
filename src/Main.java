@@ -12,5 +12,19 @@ public class Main {
         naive.match();
         RabinKarp rabinKarp = new RabinKarp(text2,pattern);
         rabinKarp.match();
+        FiniteAutomata finiteAutomata = new FiniteAutomata(text2,pattern);
+        finiteAutomata.match();
     }
+
+    /*
+    (0) -b-> (1) -a-> (2) -b-> (3)
+     _______________
+    | s | a | b | c |
+    |---------------|
+    | 0 | 0 | 1 | 0 |
+    | 1 | 2 | 1 | 0 |
+    | 2 | 0 | 3 | 0 |
+    | 3 | 0 | 1 | 0 |
+    |_______________|
+     */
 }
